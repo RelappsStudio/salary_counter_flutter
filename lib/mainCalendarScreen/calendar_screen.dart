@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:salary_counter/mainCalendarScreen/components/calendar_screen_body.dart';
 import 'package:salary_counter/mainCalendarScreen/components/user_and_work_hours_class.dart';
 import 'package:salary_counter/profileScreen/profile_screen.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'components/quick_settings_drawer.dart';
 
 class CalendarScreen extends StatelessWidget {
@@ -14,7 +14,7 @@ class CalendarScreen extends StatelessWidget {
     return Scaffold(
       drawer: UserDrawer(user: user,),
       appBar: AppBar(
-        title: Text('Witaj ${user.userName}'),
+        title: Text('${AppLocalizations.of(context).welcome} ${user.userName}'),
         actions: [
           InkWell(
             onTap: () {

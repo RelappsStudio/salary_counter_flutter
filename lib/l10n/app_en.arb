@@ -1,0 +1,40 @@
+{
+  "welcome": "welcome",
+  "previousShort": "Prev.",
+  "next": "Next",
+  "profile": "Profile",
+  "save": "Save",
+  "delete": "Delete",
+  "cancel": "Cancel",
+
+  "chooseEmploymentType": "Choose employment type",
+  "permanentEmployment": "Permanent employment contract",
+  "taskContract": "Task agreement/contract",
+  "mandateContract": "Mandate contract",
+
+  "selectAge": "Select your age",
+
+  "chooseJobTime": "Choose job time",
+
+  "selectNetPay": "Select net hourly rate",
+
+  "enterNetPay": "Enter net hourly rate",
+
+  "enterGrossPay": "Enter gross hourly rate",
+
+  "amStudent": "I am currently a student",
+
+  "selectOvertimeHours": "Select daily amount of hours after which your work is considered overtime",
+
+  "selectOvertimeModifier": "Select overtime rate multiplier",
+
+  "drawerWarning": "* you'll find more options in your profile menu that's available under profile icon found above the calendar. Any changes made here WILL NOT BE SAVED.",
+
+  "hoursRequiredInMonth": "Work hours required",
+  "expectedSalary": "Expected salary",
+  "hoursWorked": "Entered working hours",
+  "calculatedSalary": "Salary based on entered hours",
+
+  "todaysWorkedHours": "Enter hours worked today",
+  "dateChosen": "Date chosen"
+}

@@ -1,0 +1,41 @@
+{
+  "welcome": "Witaj",
+  "previousShort": "Poprz.",
+  "next": "Nast.",
+  "profile": "Profil",
+  "save": "Zapisz",
+  "delete": "Usuń",
+  "cancel": "Anuluj",
+
+  "chooseEmploymentType": "Wybierz rodzaj umowy",
+  "permanentEmployment": "Umowa o pracę",
+  "taskContract": "Umowa zlecenie",
+  "mandateContract": "Umowa o dzieło",
+
+  "selectAge": "Wybierz swój wiek",
+
+  "chooseJobTime": "Wybierz swój etat",
+
+  "selectNetPay": "Wybierz stawkę netto",
+
+  "enterNetPay": "Wpisz stawkę netto",
+
+  "enterGrossPay": "Wpisz stawkę brutto",
+
+  "amStudent": "Jestem uczniem/ studentem",
+
+  "selectOvertimeHours": "Wybierz dobową ilość godzin po której liczone są nadgodziny",
+
+  "selectOvertimeModifier": "Wybierz mnożnik nadgodzin",
+
+  "drawerWarning": "* więcej opcji dotyczących profilu znajdziesz w menu profilu klikając w ikonę konta nad kalendarzem. Zmiany dokonane tutaj NIE SĄ ZAPISYWANE.",
+
+  "hoursRequiredInMonth": "Godziny do przepracowania w tym miesiącu",
+  "expectedSalary": "Przewidywana wypłata",
+  "hoursWorked": "Godziny przepracowane",
+  "calculatedSalary": "Wypłata z przepracowanych godzin",
+
+  "todaysWorkedHours": "Wpisz dzisiejsze przepracowane godziny",
+  "dateChosen": "Wybrana data"
+
+}

@@ -10,6 +10,7 @@ import 'package:salary_counter/databaseFiles/database_helper.dart';
 import 'package:salary_counter/mainCalendarScreen/components/user_and_work_hours_class.dart';
 import 'package:salary_counter/profileScreen/components/profile_screen_body.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 class CalendarScreenBody extends StatefulWidget {
@@ -171,7 +172,7 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
                           ),
                         )),
                     ElevatedButton(
-                      child: Text('Poprz.'),
+                      child: Text(AppLocalizations.of(context).previousShort),
                       onPressed: () {
                         setState(() {
                           _targetDateTime = DateTime(
@@ -185,7 +186,7 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
                       width: 20,
                     ),
                     ElevatedButton(
-                      child: Text('Nast.'),
+                      child: Text(AppLocalizations.of(context).next),
                       onPressed: () async {
                         await DatabaseHelper().getUser();
                         //log('${ [0]}');
@@ -202,15 +203,15 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
-                Text('Ilość roboczogodzin w tym miesiącu = $_workHours'),
+                Text('${AppLocalizations.of(context).hoursRequiredInMonth} = $_workHours'),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.01,
                 ),
-                Text('Przewidywana wypłata = $_estimatedPay'),
+                Text('${AppLocalizations.of(context).expectedSalary} = $_estimatedPay'),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.01,
                 ),
-                Text('Przepracowane godziny = $_realWorkHours'),
+                Text('${AppLocalizations.of(context).hoursWorked} = $_realWorkHours'),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.05,
                 ),
@@ -266,7 +267,7 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
       return AlertDialog(
         title: Padding(
           padding: const EdgeInsets.all(10),
-          child: Center(child: Text('Wpisz ilość godzin\nprzepracowanych dzisiaj')),
+          child: Center(child: Text(AppLocalizations.of(context).todaysWorkedHours)),
         ),
         content: Container(
           height: MediaQuery.of(context).size.height * 0.3,
@@ -275,7 +276,7 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
               children: [
             Container(
             height: 20),
-                Text('Wybrana data = ${date.day}/${date.month}/${date.year}'),
+                Text('${AppLocalizations.of(context).dateChosen} = ${date.day}/${date.month}/${date.year}'),
                 Container(
                     height: 20),
                 TextField(
@@ -322,13 +323,13 @@ class _CalendarScreenBodyState extends State<CalendarScreenBody> {
                 }
 
             },
-              child: Text('Zapisz')),
-          Text('Usuń'),
+              child: Text(AppLocalizations.of(context).save)),
+          Text(AppLocalizations.of(context).delete),
           InkWell(
             onTap: () {
               Navigator.of(context).pop();
             },
-              child: Text('Anuluj')),
+              child: Text(AppLocalizations.of(context).cancel)),
         ],
       );
     },

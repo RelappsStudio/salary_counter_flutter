@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:salary_counter/mainCalendarScreen/calendar_screen.dart';
 import 'package:salary_counter/mainCalendarScreen/components/user_and_work_hours_class.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 class UserDrawer extends StatefulWidget {
@@ -28,7 +29,7 @@ class _UserDrawerState extends State<UserDrawer> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Text('Wybierz rodzaj umowy', style: TextStyle(fontSize: 20),),
+              Text(AppLocalizations.of(context).chooseEmploymentType, style: TextStyle(fontSize: 20),),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -48,7 +49,7 @@ class _UserDrawerState extends State<UserDrawer> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Text('Wybierz swój wiek', style: TextStyle(fontSize: 20),),
+              Text(AppLocalizations.of(context).selectAge, style: TextStyle(fontSize: 20),),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -69,7 +70,7 @@ class _UserDrawerState extends State<UserDrawer> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Text('Wybierz aktualny etat', style: TextStyle(fontSize: 20),),
+              Text(AppLocalizations.of(context).chooseJobTime, style: TextStyle(fontSize: 20),),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -84,7 +85,7 @@ class _UserDrawerState extends State<UserDrawer> {
                   },
                   items: [
                     DropdownMenuItem(child: Text('Wybierz etat'), value: 0),
-                    DropdownMenuItem(child: Text('Pełny'), value: 1),
+                    DropdownMenuItem(child: Text('1'), value: 1),
                     DropdownMenuItem(child: Text('3/4'), value: 0.75),
                     DropdownMenuItem(child: Text('1/2'), value: 0.5),
                     DropdownMenuItem(child: Text('1/4'), value: 0.25),
@@ -92,7 +93,7 @@ class _UserDrawerState extends State<UserDrawer> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              Text('Wybierz stawkę netto', style: TextStyle(fontSize: 20)),
+              Text(AppLocalizations.of(context).selectNetPay, style: TextStyle(fontSize: 20)),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.01,
               ),
@@ -116,7 +117,7 @@ class _UserDrawerState extends State<UserDrawer> {
               ),
               Padding(
                 padding: const EdgeInsets.all(20),
-                child: Text('* więcej opcji dotyczących profilu znajdziesz w menu profilu klikając w ikonę konta nad kalendarzem. Zmiany dokonane tutaj NIE SĄ ZAPISYWANE.'),
+                child: Text(AppLocalizations.of(context).drawerWarning),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'dart:developer';
 import 'dart:ui';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:salary_counter/databaseFiles/database_helper.dart';
@@ -48,7 +48,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wybierz rodzaj umowy', style: TextStyle(fontSize: 20),),
+            Text(AppLocalizations.of(context).chooseEmploymentType, style: TextStyle(fontSize: 20),),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -60,15 +60,15 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   });
                 },
                 items: [
-                  DropdownMenuItem(child: Text('Umowa o pracę'), value: 0),
-                  DropdownMenuItem(child: Text('Umowa o zlecenie'), value: 1),
-                  DropdownMenuItem(child: Text('Umowa o dzieło'), value: 2),
+                  DropdownMenuItem(child: Text(AppLocalizations.of(context).permanentEmployment), value: 0),
+                  DropdownMenuItem(child: Text(AppLocalizations.of(context).mandateContract), value: 1),
+                  DropdownMenuItem(child: Text(AppLocalizations.of(context).taskContract), value: 2),
 
                 ] ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wybierz swój wiek', style: TextStyle(fontSize: 20),),
+            Text(AppLocalizations.of(context).selectAge, style: TextStyle(fontSize: 20),),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -89,7 +89,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wybierz aktualny etat', style: TextStyle(fontSize: 20),),
+            Text(AppLocalizations.of(context).chooseJobTime, style: TextStyle(fontSize: 20),),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -104,7 +104,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                 },
                 items: [
                   DropdownMenuItem(child: Text('Wybierz etat'), value: 0),
-                  DropdownMenuItem(child: Text('Pełny'), value: 1),
+                  DropdownMenuItem(child: Text('1'), value: 1),
                   DropdownMenuItem(child: Text('3/4'), value: 0.75),
                   DropdownMenuItem(child: Text('1/2'), value: 0.5),
                   DropdownMenuItem(child: Text('1/4'), value: 0.25),
@@ -112,7 +112,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wpisz stawkę netto', style: TextStyle(fontSize: 20)),
+            Text(AppLocalizations.of(context).selectNetPay, style: TextStyle(fontSize: 20)),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -139,7 +139,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wpisz stawkę brutto', style: TextStyle(fontSize: 20)),
+            Text(AppLocalizations.of(context).enterGrossPay, style: TextStyle(fontSize: 20)),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -174,13 +174,13 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   widget.user.isStudent = (check ? 1 : 0);
                 });
               })  ,
-                Text('Jestem uczniem/studentem', style: TextStyle(fontSize: 15)),
+                Text(AppLocalizations.of(context).amStudent, style: TextStyle(fontSize: 15)),
               ],
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wybierz dobową ilość godzin\npo której liczone są nadgodziny', style: TextStyle(fontSize: 20),),
+            Text(AppLocalizations.of(context).selectOvertimeHours, style: TextStyle(fontSize: 20),),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -201,7 +201,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            Text('Wybierz procentowy mnożnik nadgodzin', style: TextStyle(fontSize: 20),),
+            Text(AppLocalizations.of(context).selectOvertimeModifier, style: TextStyle(fontSize: 20),),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.01,
             ),
@@ -234,7 +234,7 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                 child: Container(
                   width: 200,
                     height: 80,
-                    child: Center(child: Text('Zapisz')))),
+                    child: Center(child: Text(AppLocalizations.of(context).save)))),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
